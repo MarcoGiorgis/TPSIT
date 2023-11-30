@@ -40,10 +40,26 @@ void selectionSort(int vett[], int n){
             if (*kmin > *j) // confronti
                 kmin = j;
         }
-        if (kmin != k)
+        if (kmin != k){
             scambio(k, kmin); // scambi
+        }
     }
     return;
+}
+void selectionSort(int v[], int n)
+{
+    int k, kmin, j;
+    for (k = 0; k < n - 1; k++)
+    {
+        kmin = k;
+        for (j = k + 1; j < n; j++)
+        {
+            if (*(v + kmin) > *(v + j)) // confronti
+                kmin = j;
+        }
+        if (kmin != k)
+            scambio((v + k), (v + kmin)); // scambi
+    }
 }
 void stampaVettore(int vett[], int n){
     for(int *p = vett; p < vett + n; p++){
@@ -56,5 +72,6 @@ int main(){
     caricaVettore(vett, dim);
     stampaVettore(vett, dim);
     selectionSort(vett, dim);
+    stampaVettore(vett, dim);
     return 0;
 }
