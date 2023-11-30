@@ -27,17 +27,15 @@ void stampaLista(ElementoLista* lista){
 int funzioneFirstEven(ElementoLista* lista){
     ElementoLista* l = lista;
     int pos = 0;
-    int posFinale;
-    int tro = -1;
-    while (l != NULL && tro == -1)
+    while (l != NULL)
     {
-        pos++;
         if(l->s % 2 == 0){
-            return pos-1;
+            return pos;
         }
         else{
             l = l->next;
         }
+        pos++;
     }  
     return NULL;     
 }
