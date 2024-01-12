@@ -102,7 +102,7 @@ void controlloParentesi(char *espressione, int dim){
     else
         printf("\nPARENTESI NON CORRETTE");
 }
-*/
+
 int lunghezzaStringa(char espressione[]){
     int lung = 0;
     for(int k = 0; espressione[k] != '\0'; k++){
@@ -110,7 +110,7 @@ int lunghezzaStringa(char espressione[]){
     }
     return lung;
 }
-
+*/
 int main(){
     char* espressione;
     espressione = (char*) malloc(DIM * sizeof(char));
